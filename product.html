@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/LOGO ADI.png">
+    <title>Product Details</title>
+
+</head>
+
+<body class="products_page">
+
+    <!-- NAV -->
+
+    <nav>
+
+        <a class="logo" href="index.html">Adidas</a>
+
+        <ul>
+
+            <li><a href="index.html">Home</a></li>
+            <li><a href="men.html">Men</a></li>
+            <li><a href="woman.html">Woman</a></li>
+            <li><a href="kids.html">Kids</a></li>
+             <li>
+            <a href="cart.html" class="cart">
+                🛒 <span id="cart-count">0</span>
+            </a>
+        </li>
+
+        </ul>
+
+    </nav>
+
+    <!-- PRODUCT DETAILS -->
+
+    <div class="product-details">
+
+        <div class="product-image">
+
+            <img id="product-img" src="">
+
+        </div>
+
+        <div class="product-info">
+
+            <h1 id="product-name"></h1>
+
+            <p id="product-price"></p>
+
+            <p class="desc">
+                High quality Adidas shoes with modern style and comfort.
+            </p>
+
+            <div class="sizes">
+
+                <h3>Sizes</h3>
+
+                <button>39</button>
+                <button>40</button>
+                <button>41</button>
+                <button>42</button>
+                <button>43</button>
+
+            </div>
+
+            <button class="buy-btn" onclick="addToCart()">
+                Add To Cart
+            </button>
+
+        </div>
+
+    </div>
+
+<script>
+
+let params = new URLSearchParams(window.location.search);
+
+let name = params.get("name");
+
+let price = params.get("price");
+
+let image = params.get("image");
+
+document.getElementById("product-name").innerHTML = name;
+
+document.getElementById("product-price").innerHTML = "$" + price;
+
+document.getElementById("product-img").src = image;
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+document.getElementById("cart-count").innerHTML = cart.length;
+
+function addToCart(){
+
+    let product = {
+
+        name: name,
+
+        price: price,
+
+        image: image
+
+    };
+
+    cart.push(product);
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    document.getElementById("cart-count").innerHTML = cart.length;
+
+    alert("Product Added To Cart ✅");
+
+}
+
+</script>
+
+</body>
+
+</html>

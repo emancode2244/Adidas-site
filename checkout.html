@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/LOGO ADI.png">
+
+    <title>Checkout - Adidas</title>
+</head>
+
+<body class="checkout-page">
+
+<!-- NAV -->
+
+<nav>
+
+    <a class="logo" href="index.html">Adidas</a>
+
+    <ul>
+
+        <li><a href="index.html">Home</a></li>
+        <li><a href="men.html">Men</a></li>
+        <li><a href="woman.html">Woman</a></li>
+        <li><a href="kids.html">Kids</a></li>
+
+        <li>
+            <a href="cart.html" class="cart">
+                🛒 <span id="cart-count">0</span>
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+<!-- CHECKOUT -->
+
+<div class="checkout-container">
+
+    <h1>Checkout</h1>
+
+    <form id="checkout-form">
+
+        <input 
+        type="text" 
+        id="name"
+        placeholder="Full Name"
+        required>
+
+        <input 
+        type="email" 
+        id="email"
+        placeholder="Email Address"
+        required>
+
+        <input 
+        type="text" 
+        id="address"
+        placeholder="Address"
+        required>
+
+        <!-- PAYMENT METHOD -->
+
+        <select id="payment-method" required>
+
+            <option value="">
+                Select Payment Method
+            </option>
+
+            <option value="visa">
+                Visa Card
+            </option>
+
+            <option value="mastercard">
+                MasterCard
+            </option>
+
+            <option value="cash">
+                Cash On Delivery
+            </option>
+
+        </select>
+
+        <!-- CARD DATA -->
+
+        <input 
+        type="text"
+        id="card-number"
+        placeholder="Card Number">
+
+        <input 
+        type="text"
+        id="card-date"
+        placeholder="MM/YY">
+
+        <input 
+        type="text"
+        id="cvv"
+        placeholder="CVV">
+
+        <button type="submit">
+            Confirm Payment
+        </button>
+
+    </form>
+
+</div>
+
+<!-- SUCCESS MESSAGE -->
+
+<div class="success-popup" id="success-popup">
+
+    <div class="popup-box">
+
+        <div class="check-icon">
+            ✔
+        </div>
+
+        <h2>Payment Successful</h2>
+
+        <p>Your order has been confirmed successfully.</p>
+
+        <a href="index.html">
+            <button>
+                Back To Home
+            </button>
+        </a>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+
+/* PAYMENT METHOD */
+
+let paymentMethod =
+document.getElementById("payment-method");
+
+let cardNumber =
+document.getElementById("card-number");
+
+let cardDate =
+document.getElementById("card-date");
+
+let cvv =
+document.getElementById("cvv");
+
+paymentMethod.addEventListener("change", () => {
+
+    if(paymentMethod.value === "cash"){
+
+        cardNumber.style.display = "none";
+        cardDate.style.display = "none";
+        cvv.style.display = "none";
+
+    }else{
+
+        cardNumber.style.display = "block";
+        cardDate.style.display = "block";
+        cvv.style.display = "block";
+
+    }
+
+});
+
+
+/* FORM VALIDATION */
+
+document.getElementById("checkout-form")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    let name =
+    document.getElementById("name").value;
+
+    let email =
+    document.getElementById("email").value;
+
+    let address =
+    document.getElementById("address").value;
+
+    let method =
+    paymentMethod.value;
+
+    if(
+        name === "" ||
+        email === "" ||
+        address === "" ||
+        method === ""
+    ){
+        alert("Please fill all fields");
+        return;
+    }
+
+    /* CARD VALIDATION */
+
+    if(method !== "cash"){
+
+        if(
+            cardNumber.value.length < 16 ||
+            cardDate.value === "" ||
+            cvv.value.length < 3
+        ){
+            alert("Please enter valid card details");
+            return;
+        }
+
+    }
+
+    /* SUCCESS */
+
+    document.getElementById("success-popup")
+    .style.display = "flex";
+
+    localStorage.removeItem("cart");
+
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/LOGO ADI.png">
+    <title>Men - Adidas</title>
+</head>
+
+<body class="men-page">
+
+<!-- NAV -->
+
+<nav>
+
+    <a class="logo" href="index.html">Adidas</a>
+
+    <ul>
+
+        <li><a href="index.html">Home</a></li>
+        <li><a href="men.html">Men</a></li>
+        <li><a href="woman.html">Woman</a></li>
+        <li><a href="kids.html">Kids</a></li>
+
+        <li>
+            <a href="cart.html" class="cart">
+                🛒 <span id="cart-count">0</span>
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+<div class="container">
+
+    <!-- TITLE -->
+
+    <div class="title">
+
+        <h1>Men Collection</h1>
+
+        <p>Discover the latest Adidas men's shoes</p>
+
+    </div>
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+        <input 
+        type="text" 
+        id="search"
+        placeholder="Search shoes...">
+
+    </div>
+
+    <!-- PRODUCTS -->
+
+    <div class="products">
+
+        <!-- 1 -->
+
+        <div class="card"
+        onclick="goToProduct(this)"
+        data-name="Running Shoes"
+        data-price="120"
+        data-image="img/img1.png">
+
+            <img src="img/img1.png">
+
+            <h3>Running Shoes</h3>
+
+            <p>$120</p>
+
+            <button class="add-cart">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- 2 -->
+
+        <div class="card"
+        onclick="goToProduct(this)"
+        data-name="Sport Shoes"
+        data-price="150"
+        data-image="img/img2.png">
+
+            <img src="img/img2.png">
+
+            <h3>Sport Shoes</h3>
+
+            <p>$150</p>
+
+            <button class="add-cart">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- 3 -->
+
+        <div class="card"
+        onclick="goToProduct(this)"
+        data-name="Classic Shoes"
+        data-price="100"
+        data-image="img/img3.png">
+
+            <img src="img/img3.png">
+
+            <h3>Classic Shoes</h3>
+
+            <p>$100</p>
+
+            <button class="add-cart">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- 4 -->
+
+        <div class="card"
+        onclick="goToProduct(this)"
+        data-name="Modern Shoes"
+        data-price="130"
+        data-image="img/img4.png">
+
+            <img src="img/img4.png">
+
+            <h3>Modern Shoes</h3>
+
+            <p>$130</p>
+
+            <button class="add-cart">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- 5 -->
+
+        <div class="card"
+        onclick="goToProduct(this)"
+        data-name="White Shoes"
+        data-price="180"
+        data-image="img/img5.png">
+
+            <img src="img/img5.png">
+
+            <h3>White Shoes</h3>
+
+            <p>$180</p>
+
+            <button class="add-cart">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- 6 -->
+
+        <div class="card"
+        onclick="goToProduct(this)"
+        data-name="Black Shoes"
+        data-price="160"
+        data-image="img/img6.png">
+
+            <img src="img/img6.png">
+
+            <h3>Black Shoes</h3>
+
+            <p>$160</p>
+
+            <button class="add-cart">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- 7 -->
+
+        <div class="card"
+        onclick="goToProduct(this)"
+        data-name="Adidas Runner"
+        data-price="140"
+        data-image="img/img7.png">
+
+            <img src="img/img7.png">
+
+            <h3>Adidas Runner</h3>
+
+            <p>$140</p>
+
+            <button class="add-cart">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- 8 -->
+
+        <div class="card"
+        onclick="goToProduct(this)"
+        data-name="Street Shoes"
+        data-price="125"
+        data-image="img/img8.png">
+
+            <img src="img/img8.png">
+
+            <h3>Street Shoes</h3>
+
+            <p>$125</p>
+
+            <button class="add-cart">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- 9 -->
+
+        <div class="card"
+        onclick="goToProduct(this)"
+        data-name="Premium Shoes"
+        data-price="200"
+        data-image="img/img9.png">
+
+            <img src="img/img9.png">
+
+            <h3>Premium Shoes</h3>
+
+            <p>$200</p>
+
+            <button class="add-cart">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- 10 -->
+
+        <div class="card"
+        onclick="goToProduct(this)"
+        data-name="Sport Runner"
+        data-price="170"
+        data-image="img/img10.png">
+
+            <img src="img/img10.png">
+
+            <h3>Sport Runner</h3>
+
+            <p>$170</p>
+
+            <button class="add-cart">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- 11 -->
+
+        <div class="card"
+        onclick="goToProduct(this)"
+        data-name="Daily Shoes"
+        data-price="110"
+        data-image="img/img11.png">
+
+            <img src="img/img11.png">
+
+            <h3>Daily Shoes</h3>
+
+            <p>$110</p>
+
+            <button class="add-cart">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- 12 -->
+
+        <div class="card"
+        onclick="goToProduct(this)"
+        data-name="Grey Shoes"
+        data-price="135"
+        data-image="img/img12.png">
+
+            <img src="img/img12.png">
+
+            <h3>Grey Shoes</h3>
+
+            <p>$135</p>
+
+            <button class="add-cart">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- 13 -->
+
+        <div class="card"
+        onclick="goToProduct(this)"
+        data-name="Training Shoes"
+        data-price="145"
+        data-image="img/img13.png">
+
+            <img src="img/img13.png">
+
+            <h3>Training Shoes</h3>
+
+            <p>$145</p>
+
+            <button class="add-cart">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- 14 -->
+
+        <div class="card"
+        onclick="goToProduct(this)"
+        data-name="Fast Runner"
+        data-price="175"
+        data-image="img/img14.png">
+
+            <img src="img/img14.png">
+
+            <h3>Fast Runner</h3>
+
+            <p>$175</p>
+
+            <button class="add-cart">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- 15 -->
+
+        <div class="card"
+        onclick="goToProduct(this)"
+        data-name="Red Shoes"
+        data-price="150"
+        data-image="img/img15.png">
+
+            <img src="img/img15.png">
+
+            <h3>Red Shoes</h3>
+
+            <p>$150</p>
+
+            <button class="add-cart">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- 16 -->
+
+        <div class="card"
+        onclick="goToProduct(this)"
+        data-name="Cool Sneakers"
+        data-price="115"
+        data-image="img/img16.png">
+
+            <img src="img/img16.png">
+
+            <h3>Cool Sneakers</h3>
+
+            <p>$115</p>
+
+            <button class="add-cart">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- 17 -->
+
+        <div class="card"
+        onclick="goToProduct(this)"
+        data-name="Urban Shoes"
+        data-price="165"
+        data-image="img/img17.png">
+
+            <img src="img/img17.png">
+
+            <h3>Urban Shoes</h3>
+
+            <p>$165</p>
+
+            <button class="add-cart">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- 18 -->
+
+        <div class="card"
+        onclick="goToProduct(this)"
+        data-name="Power Shoes"
+        data-price="190"
+        data-image="img/img18.png">
+
+            <img src="img/img18.png">
+
+            <h3>Power Shoes</h3>
+
+            <p>$190</p>
+
+            <button class="add-cart">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- 19 -->
+
+        <div class="card"
+        onclick="goToProduct(this)"
+        data-name="Adidas Pro"
+        data-price="210"
+        data-image="img/img19.png">
+
+            <img src="img/img19.png">
+
+            <h3>Adidas Pro</h3>
+
+            <p>$210</p>
+
+            <button class="add-cart">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- 20 -->
+
+        <div class="card"
+        onclick="goToProduct(this)"
+        data-name="Night Shoes"
+        data-price="140"
+        data-image="img/img20.png">
+
+            <img src="img/img20.png">
+
+            <h3>Night Shoes</h3>
+
+            <p>$140</p>
+
+            <button class="add-cart">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- 21 -->
+
+        <div class="card"
+        onclick="goToProduct(this)"
+        data-name="Soft Runner"
+        data-price="135"
+        data-image="img/img21.png">
+
+            <img src="img/img21.png">
+
+            <h3>Soft Runner</h3>
+
+            <p>$135</p>
+
+            <button class="add-cart">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- 22 -->
+
+        <div class="card"
+        onclick="goToProduct(this)"
+        data-name="Gym Shoes"
+        data-price="180"
+        data-image="img/img22.png">
+
+            <img src="img/img22.png">
+
+            <h3>Gym Shoes</h3>
+
+            <p>$180</p>
+
+            <button class="add-cart">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- 23 -->
+
+        <div class="card"
+        onclick="goToProduct(this)"
+        data-name="Air Shoes"
+        data-price="220"
+        data-image="img/img23.png">
+
+            <img src="img/img23.png">
+
+            <h3>Air Shoes</h3>
+
+            <p>$220</p>
+
+            <button class="add-cart">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- 24 -->
+
+        <div class="card"
+        onclick="goToProduct(this)"
+        data-name="Smart Sneakers"
+        data-price="160"
+        data-image="img/img24.png">
+
+            <img src="img/img24.png">
+
+            <h3>Smart Sneakers</h3>
+
+            <p>$160</p>
+
+            <button class="add-cart">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- 25 -->
+
+        <div class="card"
+        onclick="goToProduct(this)"
+        data-name="Sport Flex"
+        data-price="145"
+        data-image="img/img25.png">
+
+            <img src="img/img25.png">
+
+            <h3>Sport Flex</h3>
+
+            <p>$145</p>
+
+            <button class="add-cart">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- 26 -->
+
+        <div class="card"
+        onclick="goToProduct(this)"
+        data-name="Strong Runner"
+        data-price="195"
+        data-image="img/img26.png">
+
+            <img src="img/img26.png">
+
+            <h3>Strong Runner</h3>
+
+            <p>$195</p>
+
+            <button class="add-cart">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- 27 -->
+
+        <div class="card"
+        onclick="goToProduct(this)"
+        data-name="Fast Sneakers"
+        data-price="170"
+        data-image="img/img27.png">
+
+            <img src="img/img27.png">
+
+            <h3>Fast Sneakers</h3>
+
+            <p>$170</p>
+
+            <button class="add-cart">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- 28 -->
+
+        <div class="card"
+        onclick="goToProduct(this)"
+        data-name="Elite Shoes"
+        data-price="230"
+        data-image="img/img28.png">
+
+            <img src="img/img28.png">
+
+            <h3>Elite Shoes</h3>
+
+            <p>$230</p>
+
+            <button class="add-cart">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- 29 -->
+
+        <div class="card"
+        onclick="goToProduct(this)"
+        data-name="Dynamic Shoes"
+        data-price="155"
+        data-image="img/img29.png">
+
+            <img src="img/img29.png">
+
+            <h3>Dynamic Shoes</h3>
+
+            <p>$155</p>
+
+            <button class="add-cart">
+                Add To Cart
+            </button>
+
+        </div>
+
+        <!-- 30 -->
+
+        <div class="card"
+        onclick="goToProduct(this)"
+        data-name="Adidas Max"
+        data-price="250"
+        data-image="img/img30.png">
+
+            <img src="img/img30.png">
+
+            <h3>Adidas Max</h3>
+
+            <p>$250</p>
+
+            <button class="add-cart">
+                Add To Cart
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- BOTTOM NAV -->
+
+    <div class="nav-bottom">
+
+        <a href="woman.html">👠 Women</a>
+        <a href="kids.html">🧒 Kids</a>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
